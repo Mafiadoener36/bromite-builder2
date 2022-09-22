@@ -12,6 +12,7 @@ jobs:
           root-reserve-mb: 512
           swap-size-mb: 1024
           remove-dotnet: 'true'
+          remove-haskell: 'true'
       - name: Checkout
         uses: actions/checkout@v2
 
@@ -43,7 +44,7 @@ jobs:
 
       - name: Build the app
 #        working-directory: temp
-        run: ./bromite-builder --arch=arm --bromite-git-url="https://github.com/Mafiadoener36/bromite2.git" --dark-navbar --ubuntu-install-build-deps
+        run: ./bromite-builder --arch=arm --dark-navbar --ubuntu-install-build-deps # --bromite-git-url="https://github.com/Mafiadoener36/bromite2.git"
 
       - name: Upload apk
         uses: actions/upload-artifact@v3
