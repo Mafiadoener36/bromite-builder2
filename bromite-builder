@@ -528,12 +528,12 @@ _localbin () {
     git checkout main -q
     git pull -q
 
-#CUSTOM SOURCE INITIALISATION TRY1
-    gclient config  "https://github.com/Mafiadoener36/KIWI-src.next.git"
-
     # Update PATH
     export PATH=$CWD/.bin:$CWD/.bin/depot_tools:$PATH
     export PYTHONPATH="$CWD/.bin/depot_tools/third_party:$PYTHONPATH"
+
+#CUSTOM SOURCE INITIALISATION TRY1
+    gclient config  "https://github.com/Mafiadoener36/KIWI-src.next.git"
 
     # Ensure 64 bit protobuf-gen-javalite is available in PATH
     # Can remove after issue is resolved https://crbug.com/988512
