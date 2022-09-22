@@ -18,7 +18,7 @@ jobs:
         run: sudo apt-get install -y git && sudo apt install -y python2 && sudo apt install -y python3
 
       - name: ls + dir
-        working-directory: temp
+        #working-directory: temp
         run: ls -la #ls && dir
 
       - name: make bromite-builder executable
