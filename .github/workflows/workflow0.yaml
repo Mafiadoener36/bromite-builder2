@@ -1,6 +1,6 @@
 name: workflow0
 
-on: [workflow_dispatch]
+on: [push] #[workflow_dispatch]
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
 
       - name: ls + dir
         working-directory: temp
-        run: ls && dir
+        run: ls -la #ls && dir
 
       - name: make bromite-builder executable
         run: sudo chmod +x ./bromite-builder
