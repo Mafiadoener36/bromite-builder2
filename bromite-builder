@@ -71,7 +71,7 @@ set-revision () {
         || echo '')
 
     [[ $custom_build ]] \
-        && chromium_archive="https://github.com/chromium/chromium/archive/$REVISION.tar.gz" \
+        && chromium_archive= "https://github.com/Mafiadoener36/KIWI-src.next/archive/refs/tags/3071706106.tar.gz" \ #"https://github.com/chromium/chromium/archive/$REVISION.tar.gz" \
         && [[ $(curl -Lso /dev/null -I -w "%{http_code}" "$chromium_archive") != 200 ]] \
         && error_msg="Error: Release tag $REVISION not found"
 
