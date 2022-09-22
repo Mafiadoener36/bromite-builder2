@@ -1,6 +1,6 @@
 name: workflow0
 
-on: [push] #[workflow_dispatch]
+on:  [workflow_dispatch] #[push]
 
 jobs:
   build:
@@ -14,8 +14,8 @@ jobs:
 #      - name: Open working temp dir
 #        working-directory: temp
 
-      - name: Installing Dependencies
-        run: sudo apt-get install -y git && sudo apt install -y python2 && sudo apt install -y python3
+#      - name: Installing Dependencies
+#        run: sudo apt-get install -y git && sudo apt install -y python2 && sudo apt install -y python3
 
       - name: ls + dir
         #working-directory: temp
